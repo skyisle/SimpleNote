@@ -9,6 +9,7 @@ import android.widget.EditText;
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -36,6 +37,11 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 
         injectInstrumentation(InstrumentationRegistry.getInstrumentation());
         getActivity();
+    }
+
+    @After
+    public void tearDown() throws Exception {
+        super.tearDown();
     }
 
     @Test
